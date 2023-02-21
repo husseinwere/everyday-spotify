@@ -27,7 +27,7 @@ export class SearchService {
 
     }
 
-    searchAll(q: string): Observable<any> {
+    searchAll(q: string, page: { offset: number, limit: number }): Observable<any> {
 
         const headers = new HttpHeaders({
             'Authorization': `Bearer ${this.authToken}`,
@@ -35,7 +35,8 @@ export class SearchService {
         })
         const params = {
             q,
-            type: 'track,album,artist'
+            type: 'track,album,artist',
+            ...page
         }
 
         return this.http.get<any>(`${this.BASE_URL}/search`, { headers, params })
