@@ -1,0 +1,7 @@
+<h2>Spotify Search</h2>
+<p>Hey there, enter any track, album or artist and we'll search it for you!</p>
+<mat-form-field appearance="outline">
+    <mat-label>Enter a name</mat-label>
+    <input matInput type="text" [formControl]="searchQuery">
+    <span matSuffix><mat-spinner [diameter]="20" *ngIf="isSearching"></mat-spinner></span>
+</mat-form-field>
