@@ -36,6 +36,7 @@ export class SearchComponent {
   searchAll(query: string, page: any) {
 
     if(query) {
+
       this.isSearching = true;
 
       this.searchService.searchAll(query, page).subscribe({
@@ -47,6 +48,12 @@ export class SearchComponent {
               this.resultTotal = res[this.selectedType].total
           }
       });
+    }
+    else {
+      
+      this.response = null
+      this.dataSource.data = []
+      this.resultTotal = 0
     }
 
   }
