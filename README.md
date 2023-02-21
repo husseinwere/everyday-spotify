@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Open the terminal and navigate to the extracted folder
 - Run the command `npm install`
 - After it's done, run the command `npm start`
-- Open your browser and navigate to localhost:4200 to view the application
+- Open your browser and navigate to `localhost:4200` to view the application
 
 # Online Access
 
